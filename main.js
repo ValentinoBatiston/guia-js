@@ -257,3 +257,5 @@ localStorage.setItem("jugador", JSON.stringify(jugadorLS));
 const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
 
 console.log(jugadorRecuperado);
+
+// rama DOM y datos funcionando
