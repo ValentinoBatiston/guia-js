@@ -258,4 +258,4 @@ const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
 
 console.log(jugadorRecuperado);
 
-// rama ejercicios-basicos funcionando
+// rama DOM y datos funcionando
