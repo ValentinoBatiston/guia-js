@@ -185,3 +185,75 @@ for (let i = 0; i < personajes.length; i++) {
   let p = personajes[i];
   console.log(p.nombre + " es " + p.tipo + " y está en nivel " + p.nivel);
 }
+
+// EJERCICIO 19
+const personajesFuertes = personajes.filter((personaje) => {
+  return personaje.nivel >= 3;
+});
+
+console.log(personajesFuertes);
+
+// EJERCICIO 20
+const nombres = personajes.map((personaje) => {
+  return personaje.nombre;
+});
+
+console.log(nombres);
+
+// EJERCICIO 21
+const personajeEncontrado = personajes.find((personaje) => {
+  return personaje.nombre === "Kai";
+});
+
+console.log(personajeEncontrado);
+
+// EJERCICIO 22
+const vidaTotal = personajes.reduce((acumulador, personaje) => {
+  return acumulador + personaje.vida;
+}, 0);
+
+console.log(vidaTotal);
+
+// EJERCICIO 23
+//const mensaje = document.getElementById("mensaje");
+
+mensaje.textContent = "Bienvenido a la guía de JavaScript";
+mensaje.style.color = "blue";
+
+// EJERCICIO 24
+//const boton = document.getElementById("btn");
+const mensaje2 = document.getElementById("mensaje");
+
+let puntos = 0;
+
+boton.addEventListener("click", function () {
+  puntos += 10;
+  mensaje2.textContent = "Puntos: " + puntos;
+});
+
+// EJERCICIO 25
+//const input = document.getElementById("dato");
+const boton2 = document.getElementById("btn");
+const mensaje3 = document.getElementById("mensaje");
+
+boton2.addEventListener("click", function () {
+  if (input.value === "") {
+    mensaje3.textContent = "Ingresá un nombre para continuar";
+  } else {
+    mensaje3.textContent = "Bienvenido/a, " + input.value;
+  }
+});
+
+// EJERCICIO 26
+const jugadorLS = {
+  nombre: "Luna",
+  puntaje: 1500
+};
+
+// guardar
+localStorage.setItem("jugador", JSON.stringify(jugadorLS));
+
+// recuperar
+const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
+
+console.log(jugadorRecuperado);
