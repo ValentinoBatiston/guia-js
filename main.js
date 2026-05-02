@@ -55,3 +55,72 @@ if (vidaJugador > 70) {
 } else {
   console.log("Error: vida inválida");
 }
+
+// EJERCICIO 6
+let opcion = "iniciar";
+
+switch (opcion) {
+  case "iniciar":
+    console.log("El juego ha comenzado");
+    break;
+  case "configuracion":
+    console.log("Abriendo configuración");
+    break;
+  case "creditos":
+    console.log("Mostrando créditos");
+    break;
+  case "salir":
+    console.log("Saliendo del juego");
+    break;
+  default:
+    console.log("Opción no válida");
+}
+
+// EJERCICIO 7
+for (let i = 3; i >= 1; i--) {
+  console.log(i);
+}
+console.log("¡Comienza!");
+
+// EJERCICIO 8
+let puntajeTotal = 0;
+
+for (let ronda = 1; ronda <= 5; ronda++) {
+  puntajeTotal += 10;
+}
+
+console.log("Puntaje total:", puntajeTotal);
+
+// EJERCICIO 9
+const inventario = ["espada", "poción", "llave", "escudo", "mapa"];
+
+console.log("Primer objeto:", inventario[0]);
+console.log("Último objeto:", inventario[inventario.length - 1]);
+console.log("Cantidad:", inventario.length);
+
+// EJERCICIO 10
+const inventario2 = ["espada", "poción", "llave", "escudo"];
+
+for (let i = 0; i < inventario2.length; i++) {
+  console.log(inventario2[i]);
+}
+
+// EJERCICIO 11
+let mochila = [];
+
+mochila.push("linterna");
+mochila.push("comida");
+mochila.push("mapa");
+
+mochila.pop();
+
+console.log(mochila);
+
+// EJERCICIO 12
+const inventario3 = ["espada", "poción", "escudo"];
+
+if (inventario3.includes("llave")) {
+  console.log("La puerta se abre");
+} else {
+  console.log("Necesitás una llave");
+}
